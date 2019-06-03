@@ -7,6 +7,7 @@ include: package:pedantic/analysis_options.yaml
 # Uncomment to specify additional rules.
 linter:
   rules:
+    - annotate_overrides
     - await_only_futures
     - unnecessary_parenthesis
 
