@@ -17,7 +17,7 @@ class MockStudentRepository implements StudentRepository {
 
   @override
   Future<Student> getStudent(int id) {
-    if (id != 1540120) throw "Mock server only works with Kai";
+    if (id != 1540120) throw "Mock server only works with Kai (1540120)";
     return Future.value(kai);
   }
 
@@ -25,7 +25,7 @@ class MockStudentRepository implements StudentRepository {
   Future<Student> putStudent(Student student, [int id]) {
     if ((id != null && id != 1540120) ||
         (student.id != null && student.id != 1540120)) {
-      throw "Mock server only works with Kai";
+      throw "Mock server only works with Kai (1540120)";
     }
     kai = student;
     return Future.value(kai);
@@ -33,13 +33,14 @@ class MockStudentRepository implements StudentRepository {
 
   @override
   Future<List<int>> getStudentImage(int id) async {
-    if (id != 1540120) throw "Mock server only works with Kai";
-    return kaiPicture ?? (await _client.get("/mock/IMG_20190307_173901.jpg")).bodyBytes;
+    if (id != 1540120) throw "Mock server only works with Kai (1540120)";
+    return kaiPicture ??
+        (await _client.get("/mock/IMG_20190307_173901.jpg")).bodyBytes;
   }
 
   @override
   Future<void> putStudentImage(List<int> imageData, int id) {
-    if (id != 1540120) throw "Mock server only works with Kai";
+    if (id != 1540120) throw "Mock server only works with Kai (1540120)";
     kaiPicture = imageData;
     return Future.value();
   }

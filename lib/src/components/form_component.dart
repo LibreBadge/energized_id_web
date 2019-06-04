@@ -51,7 +51,8 @@ class IdFormComponent {
   }
 
   void updateLastPrinted() {
-    idBloc.dispatch(
-        UpdateEvent(currentStudentCopy..lastPrinted = DateTime.now()));
+    idBloc
+      ..dispatch(UpdateEvent(currentStudentCopy..lastPrinted = DateTime.now()))
+      ..dispatch(SaveEvent());
   }
 }
