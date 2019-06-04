@@ -24,6 +24,13 @@ class IdPreviewComponent {
       return "08/${now.year}";
     }
   }
+
+  static const gradeColors = {
+    9: "blue",
+    10: "green",
+    11: "orange",
+    12: "darkgrey",
+  };
 }
 
 @Pipe("base64encode")
