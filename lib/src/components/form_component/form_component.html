@@ -25,6 +25,8 @@
 <div>
     Grade: <input #gradeLevel
                type="number"
+               min="9"
+               max="12"
                [value]="(idBloc | bloc).studentInfo.gradeLevel"
                (input)="updateGradeLevel(gradeLevel.value)">
 </div>
