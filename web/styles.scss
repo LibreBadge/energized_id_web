@@ -1,0 +1,12 @@
+body {
+    background-color: azure;
+
+    @media screen {
+        padding: 0 1em;
+    }
+
+    @media print {
+        margin: 0;
+        padding: 0;
+    }
+}

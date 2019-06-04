@@ -1,0 +1,5 @@
+# People are worried other people will use this to print fake IDs.
+# So we're making them go through the effort of spending their own hour on the HTML.
+
+id_preview_component.html
+id_preview_component.scss

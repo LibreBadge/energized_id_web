@@ -1,7 +1,8 @@
 import 'package:angular/angular.dart';
 
 import 'src/blocs/id_bloc.dart';
-import 'src/components/form_component.dart';
+import 'src/components/form_component/form_component.dart';
+import 'src/components/id_preview_component/id_preview_component.dart';
 import 'src/repositories/mock_student_repository.dart';
 import 'src/repositories/student_repository.dart';
 
@@ -12,7 +13,7 @@ import 'src/repositories/student_repository.dart';
   selector: 'id-app',
   styleUrls: ['app_component.css'],
   templateUrl: 'app_component.html',
-  directives: [coreDirectives, IdFormComponent],
+  directives: [coreDirectives, IdFormComponent, IdPreviewComponent],
   providers: [
     ClassProvider(StudentRepository, useClass: MockStudentRepository)
   ],

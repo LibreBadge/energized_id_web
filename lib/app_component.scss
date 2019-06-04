@@ -1,0 +1,35 @@
+@media screen {
+    :host {
+        display: grid;
+        grid-template-areas: "head preview"
+                             "nav preview"
+                             "form preview";
+        grid-template-rows: 5em
+                            5em
+                            auto;
+        grid-template-columns: auto auto;
+        grid-gap: .5em;
+    }
+     
+    h1 {
+        grid-area: head;
+    }
+    
+    id-form {
+        grid-area: form;
+    }
+    
+    id-preview {
+        grid-area: preview;
+    }
+}
+
+@media print {
+    * {
+        display: none;
+    }
+
+    id-preview {
+        display: initial;
+    }
+}

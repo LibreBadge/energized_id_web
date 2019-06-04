@@ -1,8 +1,8 @@
 import 'package:angular/angular.dart';
 import 'package:angular_bloc/angular_bloc.dart';
 
-import '../blocs/id_bloc.dart';
-import '../models/student.dart';
+import '../../blocs/id_bloc.dart';
+import '../../models/student.dart';
 
 @Component(
   selector: "id-form",
