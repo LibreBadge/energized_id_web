@@ -1,0 +1,43 @@
+<div>
+    ID: <input #id
+               type="number"
+               [value]="(idBloc | bloc).studentInfo.id"
+               (input)="updateId(id.value)">
+</div>
+
+<div>
+    <button (click)="save()">Save</button>
+    <button (click)="load()">Load</button>
+</div>
+
+<div>
+    First: <input #firstName
+               [value]="(idBloc | bloc).studentInfo.firstName"
+               (input)="updateFirstName(firstName.value)">
+</div>
+
+<div>
+    Last: <input #lastName
+               [value]="(idBloc | bloc).studentInfo.lastName"
+               (input)="updateLastName(lastName.value)">
+</div>
+
+<div>
+    Grade: <input #gradeLevel
+               type="number"
+               [value]="(idBloc | bloc).studentInfo.gradeLevel"
+               (input)="updateGradeLevel(gradeLevel.value)">
+</div>
+
+<div>
+    Last printed: {{(idBloc | bloc).studentInfo.lastPrinted | date}}
+    <button (click)="updateLastPrinted()">Now</button>
+</div>
+
+<div *ngIf="(idBloc | bloc).statusMessage != null"
+     class="status"
+     [innerHtml]="(idBloc | bloc).statusMessage"></div>
+    
+<div *ngIf="(idBloc | bloc).errorMessage != null"
+     class="error"
+     [innerHtml]="(idBloc | bloc).errorMessage"></div>

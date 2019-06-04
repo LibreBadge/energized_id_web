@@ -1,6 +1,6 @@
-import 'package:energized_id/energized_id.dart';
 import 'package:http/http.dart' as http;
 
+import '../models/student.dart';
 import 'student_repository.dart';
 
 class MockStudentRepository implements StudentRepository {

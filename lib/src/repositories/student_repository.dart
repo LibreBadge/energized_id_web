@@ -1,7 +1,8 @@
 import 'dart:convert';
 
-import 'package:energized_id/energized_id.dart';
 import 'package:http/http.dart' as http;
+
+import '../models/student.dart';
 
 class StudentRepository {
   http.Client _client;

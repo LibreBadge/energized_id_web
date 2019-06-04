@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
-import 'package:energized_id/energized_id.dart';
 
+import '../models/student.dart';
 import '../repositories/student_repository.dart';
 
 class IdEvent {}
