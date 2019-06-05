@@ -16,3 +16,16 @@ If you need the template files to do actual work on this project, contact @quant
 lib/src/components/id_preview_component/id_preview_component.html
 lib/src/components/id_preview_component/id_preview_component.scss
 ```
+
+## Help! It still doesn't compile :( :( :(
+
+The problem now is that our `[energized_id](https://github.com/energized-id/energized_id)` package, which provides classes that are shared between the client and server, relies on code generation from the `[json_serializable](https://pub.dev/packages/json_serializable)` package. This code generation never happens though because I guess the Dart build system isn't smart enough to build dependencies as well as the main package. To do it manually, navigate to your [pub cache](https://dart.dev/tools/pub/glossary#system-cache), find `energized_id` in the `git` folder, and run the following commands:
+
+```
+pub get
+pub run build_runner build
+```
+
+Return to this package and try to build it again. If it _still_ doesn't work for you, I'm not sure what to say.
+
+It works on my machine.
