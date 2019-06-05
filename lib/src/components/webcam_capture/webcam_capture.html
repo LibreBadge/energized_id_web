@@ -1,0 +1,11 @@
+<div>
+    <video #streamOutputEl
+           autoplay="true"></video>
+</div>
+
+<canvas #canvasEl
+        [width]="streamOutput?.videoWidth"
+        [height]="streamOutput?.videoHeight"></canvas>
+
+<button [disabled]="webcamStream == null"
+        (click)="takePicture()">Take Picture</button>

@@ -1,0 +1,20 @@
+$video-width: 640px/2;
+$video-height: 480px/2;
+
+div {
+    width: max($video-width, $video-height);
+    height: max($video-width, $video-height);
+    margin: 2px;
+}
+
+video {
+    width: $video-width;
+    height: $video-height;
+    background-color: #666;
+    margin: max(($video-width - $video-height)/2, 0) max(($video-height - $video-width)/2, 0);
+    transform: rotate(-90deg);
+}
+
+canvas {
+    display: none;
+}

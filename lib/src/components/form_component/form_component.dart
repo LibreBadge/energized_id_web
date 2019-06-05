@@ -3,12 +3,13 @@ import 'package:angular_bloc/angular_bloc.dart';
 
 import '../../blocs/id_bloc.dart';
 import '../../models/student.dart';
+import '../webcam_capture/webcam_capture.dart';
 
 @Component(
   selector: "id-form",
   templateUrl: "form_component.html",
   styleUrls: ["form_component.css"],
-  directives: [coreDirectives],
+  directives: [coreDirectives, WebcamCapture],
   pipes: [BlocPipe, DatePipe],
 )
 class IdFormComponent {

@@ -16,7 +16,7 @@ class IdPreviewComponent {
   @Input()
   IdBloc idBloc;
 
-  String get expires {
+  static String get _expires {
     var now = DateTime.now();
     if (now.month >= 8) {
       return "08/${now.year + 1}";
@@ -24,6 +24,8 @@ class IdPreviewComponent {
       return "08/${now.year}";
     }
   }
+
+  final String expires = _expires; // only calculate once
 
   static const gradeColors = {
     9: "blue",

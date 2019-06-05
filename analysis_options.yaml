@@ -9,6 +9,7 @@ linter:
   rules:
     - annotate_overrides
     - await_only_futures
+    - directives_ordering
     - unnecessary_parenthesis
 
 analyzer:
