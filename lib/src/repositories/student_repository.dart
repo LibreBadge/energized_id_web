@@ -17,7 +17,8 @@ class StudentRepository {
 
   Future<Student> putStudent(Student student, [int id]) async {
     var response = await _client.put("/students/${id ?? student.id}",
-        body: jsonEncode(student.toJson()));
+        body: jsonEncode(student.toJson()),
+        headers: {"Content-Type": "application/json"});
     if (response.statusCode != 200) {
       throw "Failed to save";
     }
@@ -33,7 +34,8 @@ class StudentRepository {
   }
 
   Future<void> putStudentImage(List<int> imageData, int id) async {
-    var response = await _client.put("/students/$id/image", body: imageData);
+    var response = await _client.put("/students/$id/image",
+        body: imageData, headers: {"Content-Type": "image/jpeg"});
     if (response.statusCode != 204) {
       throw "Failed to upload image: ${response.body}";
     }

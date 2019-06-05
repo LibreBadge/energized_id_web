@@ -14,9 +14,7 @@ import 'src/repositories/student_repository.dart';
   styleUrls: ['app_component.css'],
   templateUrl: 'app_component.html',
   directives: [coreDirectives, IdFormComponent, IdPreviewComponent],
-  providers: [
-    ClassProvider(StudentRepository, useClass: MockStudentRepository)
-  ],
+  providers: [ClassProvider(StudentRepository)],
 )
 class AppComponent implements OnInit, OnDestroy {
   final StudentRepository _studentRepository;
