@@ -1,8 +1,7 @@
 import 'package:angular/angular.dart';
 import 'package:angular_bloc/angular_bloc.dart';
 import 'package:energized_id/energized_id.dart';
-//material components below
-import 'package:angular_components/angular_components.dart';
+
 
 
 import '../../blocs/id_bloc.dart';
