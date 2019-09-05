@@ -5,7 +5,6 @@ import 'package:energized_id/energized_id.dart';
 import '../../blocs/id_bloc.dart';
 import '../webcam_capture/webcam_capture.dart';
 
-
 @Component(
   selector: "id-form",
   templateUrl: "form_component.html",
