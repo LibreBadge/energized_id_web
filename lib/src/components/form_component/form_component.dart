@@ -2,11 +2,8 @@ import 'package:angular/angular.dart';
 import 'package:angular_bloc/angular_bloc.dart';
 import 'package:energized_id/energized_id.dart';
 
-
-
 import '../../blocs/id_bloc.dart';
 import '../webcam_capture/webcam_capture.dart';
-
 
 @Component(
   selector: "id-form",
