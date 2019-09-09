@@ -1,14 +1,16 @@
 <head>
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
+<div class="row">
+<div class="col-xs-3">
 <form>
         <div class="form-group">
           <label for="#id">ID Number</label>
           <input #id type="number" class="form-control form-control-sm" [value]="(idBloc | bloc).studentInfo.id" (input)="updateId(id.value)">
         </div>
         <div class="form-group">
-            <button type="button" class="btn btn-primary" (click)="save()">Save</button>
-            <button type="button" class="btn btn-primary" (click)="load()">Load</button>
+            <button type="button" class="btn btn-primary btn-sm" (click)="save()">Save</button>
+            <button type="button" class="btn btn-primary btn-sm" (click)="load()">Load</button>
         </div>        
         <div class="form-group">
             <label for="#firstNameFirst">First Name</label>
@@ -16,8 +18,8 @@
         </div>
 
       </form>
-
-
+</div>
+</div>
 
 
 
