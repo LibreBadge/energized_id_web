@@ -1,16 +1,19 @@
 @media screen {
     :host {
         display: grid;
-        grid-template-areas: "head preview"
-                             "nav preview"
-                             "form preview";
+        grid-template-areas: "navbar navbar"
+                             "form preview"
+                             "none preview"
+                             "none preview";
         grid-template-rows: 5em
                             5em
                             auto;
         grid-template-columns: auto auto;
         grid-gap: .5em;
     }
-    
+    nav {
+        grid-area: navbar;
+    }
     id-form {
         grid-area: form;
     }
