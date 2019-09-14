@@ -16,7 +16,7 @@ import 'src/routing.dart';
   templateUrl: 'app_component.html',
   directives: [coreDirectives, routerDirectives],
   providers: [
-    ClassProvider(StudentRepository, useClass: MockStudentRepository),
+    ClassProvider(StudentRepository),
   ],
   exports: [Routes],
 )
