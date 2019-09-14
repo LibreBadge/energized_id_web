@@ -1,40 +1,55 @@
-<div>
-    ID: <input #id
-               type="number"
-               [value]="(idBloc | bloc).studentInfo.id"
-               (input)="updateId(id.value)">
+<head>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<div class="row">
+<div class="">
+<form>
+    
+        <div class="form-group">
+          <label for="#id">ID Number</label>
+          <input #id type="number" class="form-control form-control-sm" [value]="(idBloc | bloc).studentInfo.id" (input)="updateId(id.value)">
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn btn-primary btn-sm" (click)="save()">Save</button>
+            <button type="button" class="btn btn-primary btn-sm" (click)="load()">Load</button>
+            <!-- make load turn into loader while loading ID OR make full screen loader and fog over screen while loading
+                <button class="btn btn-primary" type="button" disabled>
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                   Loading...
+                  </button> -->
+        </div>        
+        <div class="form-group">
+                <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon3">First Name</span>
+                      </div>
+            <input #firstName type="text" class="form-control form-control-sm" [value]="(idBloc | bloc).studentInfo.firstName" (input)="updateFirstName(firstName.value)">
+        </div>
+        <div class="form-group">
+            <label for="#lastName">Last Name</label>    
+            <input #lastName type="text" class="form-control form-control-sm" [value]="(idBloc | bloc).studentInfo.lastName" (input)="updateLastName(lastName.value)">
+        </div>
+        <div class="form-group">
+            <label for="#gradeLevel">Grade Level</label>
+            <input #gradeLevel type="number" class="form-control form-control-sm" min="9" max="12" [value]="(idBloc | bloc).studentInfo.gradeLevel" (input)="updateGradeLevel(gradeLevel.value)">
+            </div>
+        <div class="form-group">
+            <label>Last Printed: <div>
+                   {{(idBloc | bloc).studentInfo.lastPrinted | date}}
+                    <button type="button" class="btn btn-primary btn-sm" (click)="updateLastPrinted()">Now</button>
+                </div></label>
+        </div>
+
+      </form>
+</div>
 </div>
 
-<div>
-    <button (click)="save()">Save</button>
-    <button (click)="load()">Load</button>
-</div>
 
-<div>
-    First: <input #firstName
-               [value]="(idBloc | bloc).studentInfo.firstName"
-               (input)="updateFirstName(firstName.value)">
-</div>
 
-<div>
-    Last: <input #lastName
-               [value]="(idBloc | bloc).studentInfo.lastName"
-               (input)="updateLastName(lastName.value)">
-</div>
 
-<div>
-    Grade: <input #gradeLevel
-               type="number"
-               min="9"
-               max="12"
-               [value]="(idBloc | bloc).studentInfo.gradeLevel"
-               (input)="updateGradeLevel(gradeLevel.value)">
-</div>
 
-<div>
-    Last printed: {{(idBloc | bloc).studentInfo.lastPrinted | date}}
-    <button (click)="updateLastPrinted()">Now</button>
-</div>
+
+
+
 
 <id-webcam [idBloc]="idBloc"></id-webcam>
 
