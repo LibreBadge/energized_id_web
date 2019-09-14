@@ -7,5 +7,5 @@
         [width]="streamOutput?.videoWidth"
         [height]="streamOutput?.videoHeight"></canvas>
 
-<button [disabled]="webcamStream == null"
+<button type="button" class="btn btn-primary btn-sm" [disabled]="webcamStream == null"
         (click)="takePicture()">Take Picture</button>
