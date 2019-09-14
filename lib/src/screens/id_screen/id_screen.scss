@@ -1,0 +1,28 @@
+@media screen {
+    :host {
+        display: grid;
+        grid-template-areas: "form preview";
+        grid-template-rows: auto;
+        grid-template-columns: auto auto;
+        gap: .5em;
+    }
+
+    id-form {
+        grid-area: form;
+        margin-left: 2em;
+    }
+
+    id-preview {
+        grid-area: preview;
+    }
+}
+
+@media print {
+    * {
+        display: none;
+    }
+
+    id-preview {
+        display: initial;
+    }
+}
