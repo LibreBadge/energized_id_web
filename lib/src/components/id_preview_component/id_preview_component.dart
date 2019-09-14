@@ -31,7 +31,7 @@ class IdPreviewComponent {
     9: "blue",
     10: "green",
     11: "orange",
-    12: "darkgrey",
+    12: "black",
   };
 }
 
