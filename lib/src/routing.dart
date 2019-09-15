@@ -6,7 +6,7 @@ class Routes {
   Routes._();
 
   static final idScreen = RouteDefinition(
-    path: "print",
+    path: "production",
     component: id_screen_template.IdScreenNgFactory,
     useAsDefault: true,
   );
