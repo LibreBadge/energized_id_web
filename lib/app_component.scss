@@ -1,35 +1,26 @@
 @media screen {
     :host {
         display: grid;
-        grid-template-areas: "navbar navbar"
-                             "form preview"
-                             "none preview"
-                             "none preview";
+        grid-template-areas: "navbar"
+                             "content";
         grid-template-rows: 5em
-                            5em
                             auto;
-        grid-template-columns: auto auto;
+        grid-template-columns: auto;
         grid-gap: .5em;
     }
+
     nav {
         grid-area: navbar;
     }
-    id-form {
-        grid-area: form;
-        margin-left: 2em;
-    }
-    
-    id-preview {
-        grid-area: preview;
+
+    main {
+        grid-area: content;
+        margin-bottom: 3em;
     }
 }
 
 @media print {
-    * {
+    nav {
         display: none;
-    }
-
-    id-preview {
-        display: initial;
     }
 }

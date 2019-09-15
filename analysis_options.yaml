@@ -7,10 +7,36 @@ include: package:pedantic/analysis_options.yaml
 # Uncomment to specify additional rules.
 linter:
   rules:
+    - always_declare_return_types
     - annotate_overrides
+    - avoid_catches_without_on_clauses
+    - avoid_double_and_int_checks
+    - avoid_renaming_method_parameters
+    - avoid_returning_null_for_void
+    - avoid_types_on_closure_parameters
+    - avoid_void_async
     - await_only_futures
+    - comment_references
     - directives_ordering
+    - file_names
+    - hash_and_equals
+    - lines_longer_than_80_chars
+    - no_adjacent_strings_in_list
+    - prefer_adjacent_string_concatenation
+    - prefer_generic_function_type_aliases
+    - prefer_interpolation_to_compose_strings
+    - prefer_typing_uninitialized_variables
+    - prefer_void_to_null
+    - sort_child_properties_last
+    - sort_pub_dependencies
+    - unnecessary_await_in_return
+    - unnecessary_brace_in_string_interps
     - unnecessary_parenthesis
+    - use_function_type_syntax_for_parameters
+
+    # Not quite sure about these ones, but the idea is nice
+    - use_string_buffers
+    - use_to_and_as_if_applicable
 
 analyzer:
   exclude: [build/**]
