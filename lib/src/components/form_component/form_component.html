@@ -1,10 +1,14 @@
-<head>
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-</head>
 <div class="row">
 <div class="">
 <form>
-    
+        <div class="alert alert-danger" role="alert">
+                <div *ngIf="(idBloc | bloc).statusMessage != null"
+                class="status"
+                [innerHtml]="(idBloc | bloc).statusMessage"></div>
+               
+           <div *ngIf="(idBloc | bloc).errorMessage != null"
+                class="error"
+                [innerHtml]="(idBloc | bloc).errorMessage"></div>      </div>
         <div class="form-group">
           <label for="#id">ID Number</label>
           <input #id type="number" class="form-control form-control-sm" [value]="(idBloc | bloc).studentInfo.id" (input)="updateId(id.value)">
@@ -43,20 +47,6 @@
 </div>
 </div>
 
-
-
-
-
-
-
-
-
 <id-webcam [idBloc]="idBloc"></id-webcam>
 
-<div *ngIf="(idBloc | bloc).statusMessage != null"
-     class="status"
-     [innerHtml]="(idBloc | bloc).statusMessage"></div>
-    
-<div *ngIf="(idBloc | bloc).errorMessage != null"
-     class="error"
-     [innerHtml]="(idBloc | bloc).errorMessage"></div>
+

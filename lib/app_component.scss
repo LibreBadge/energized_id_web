@@ -13,9 +13,11 @@
     }
     nav {
         grid-area: navbar;
+        margin: 0px;
     }
     id-form {
         grid-area: form;
+        margin: 20px;
     }
     
     id-preview {
