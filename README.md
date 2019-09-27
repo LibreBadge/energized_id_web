@@ -1,3 +1,4 @@
+# [NOTICE] We are switching to PHP as it fits our need better see this repositroy https://github.com/energized-id/Energized-ID-PHP
 # energized_id_web
 
 A web app that uses [AngularDart](https://webdev.dartlang.org/angular) and
